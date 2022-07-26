@@ -1,0 +1,33 @@
+
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Cabecera -->
+
+<div class="intro-text left-0 text-center bg-faded p-5 rounded">
+    <div>
+        <h4 class="section-heading mb-4">
+            <span class="section-heading-upper">Iniciar Sesion</span>
+        </h4>
+        <form action="" method="POST">{% csrf_token %}
+        
+            <table>
+        
+                {{ form.as_p}}
+        
+            </table>
+        
+            <button type="submit" id = "signup">Ingresar</button>
+            <br>
+            <br>
+        
+        
+        </section>
+        <u><b><a href="{% url 'Registro' %}">Registrarse</a></b></u>
+    </div>
+</div>
+
+{% endblock %}

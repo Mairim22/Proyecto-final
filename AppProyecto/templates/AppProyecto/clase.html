@@ -1,0 +1,32 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block content %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Formulario - Agregar Perfil</h1>
+    
+    {% if Formulario.errors %}
+
+    <p style="color: red;"> Están mal los datos, revisar</p>
+
+    {% endif %}
+
+
+    <form action="" method="POST">{% csrf_token %}
+
+        
+        <table>
+
+            {{ Formulario.as_table }}
+
+
+        </table>
+
+
+        <input type="submit", value="Enviar">
+
+    </form>
+{% endblock %}

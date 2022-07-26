@@ -1,0 +1,56 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- Cabecera -->
+<section class="page-section clearfix">
+  <div class="container">
+    <div class="intro">
+      <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{% static '..img\Escenario.jpg' %}" alt="">
+      <div class="intro-text left-0 text-center bg-faded p-4 rounded">
+        <h2 class="section-heading mb-4">
+          <span class="section-heading-upper">Clases Disponibles</span>
+        </h2>
+
+    <input type="text" nombre="nombre">
+
+    <br>
+
+    <a href="{% url 'Mensaje3' %}" target="_blank">Incribirse</a>
+
+</form>
+
+{% if cls %}
+
+<ul>
+  {% for clase in cls %}
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Horario</th>
+        <th scope="col">Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{clase.nombre}}</td>
+        <td>{{clase.horario}}</td>
+        <td>{{clase.descripcion}}</td>
+      </tr>
+    </tbody>
+  </table>
+  {% endfor %}
+
+</ul>
+
+{% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
+

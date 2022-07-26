@@ -1,0 +1,33 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<section class="page-section about-heading">
+    <div class="container">
+      <!--img class="img-fluid rounded about-heading-img mb-3 mb-lg-20" src="{% static 'img\Escenario.jpg' %}" alt=""-->
+      <div class="about-heading-content">
+        <div class="row">
+          <div class="col-xl-5 col-lg-10 mx-auto">
+            <div class="intro-text left-0 text-center bg-faded rounded py-5">
+              <h2 class="section-heading mb-4">
+                <span class="section-heading-lower">Contacto</span>
+              </h2>
+
+    
+    <form action="" method="POST">{% csrf_token %}
+        
+        <table>
+
+            {{ Formulario5.as_table }}
+
+        </table>
+
+
+        <input type="submit", value="Enviar">
+
+    </form>
+</section>
+
+{% endblock %}

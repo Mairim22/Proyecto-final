@@ -1,0 +1,18 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+{% block mensaje %}
+
+<!-- Cabecera -->
+
+<div class="intro-text left-0 text-center bg-faded p-5 rounded">
+    <div>
+        <h4 class="section-heading mb-4">
+            <span class="section-heading-upper">Su inscripcion se ha enviado</span>
+        </h4>
+        <u><b><a href="{% url 'Clases' %}">VOLVER</a></b></u>
+    </div>
+</div>
+
+{% endblock %}

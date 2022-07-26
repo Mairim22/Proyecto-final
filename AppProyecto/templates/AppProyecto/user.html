@@ -1,0 +1,29 @@
+{% extends "AppProyecto/padre.html" %}
+
+{% load static %}
+
+
+{% block content %}
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="text-homeimage">
+                        <div style="font-size: 30px; color: #ffffffde; background-color: rgba(131, 30, 30, 0.384); border-radius: 25px; border: 1px solid #05cdfd">
+                            <div class="maintext-image" data-scrollreveal="enter top over 1.5s after 0.1s" >
+                                
+                                    <h2>Te damos la Bienvenida</h2>
+                                
+                                    <h5><u><b><a style="font-size: 5; color: rgba(55, 108, 187, 0.726);" href="{% url 'options' %}">OPCIONES</a></b></u></h5>
+                            </div> 
+                            <div>
+                                <h5><u><b><a style="font-size: 5; color: rgba(55, 108, 187, 0.726);" href="{% url 'editprofile' %}">EDITAR PERFIL</a></b></u></h5>
+                            </div>   
+                            <div>
+                                <u><b><a style="font-size: 3; color: rgba(55, 108, 187, 0.726);" href="{% url 'Logout' %}">Cerrar Sesion</a></b></u>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+{% endblock %}
